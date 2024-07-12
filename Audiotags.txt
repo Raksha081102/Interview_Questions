@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio Tags Example</title>
+</head>
+<body>
+	<audio id="myAudio" controls>
+		<source src="audio_file.mp3" type="audio/mp3">
+		Your browser does not support the audio element.
+	</audio>
+	
+	<script>
+		// Get the audio element
+		var audio = document.getElementById('myAudio');
+		
+		// Get the audio tags
+		var title = audio.getElementsByTagName('title')[0].textContent;
+		var artist = audio.getElementsByTagName('artist')[0].textContent;
+		var album = audio.getElementsByTagName('album')[0].textContent;
+		
+		// Display the audio tags
+		document.getElementById('title').innerHTML = 'Title: ' + title;
+		document.getElementById('artist').innerHTML = 'Artist: ' + artist;
+		document.getElementById('album').innerHTML = 'Album: ' + album;
+	</script>
+	
+	<div id="title"></div>
+	<div id="artist"></div>
+	<div id="album"></div>
+</body>
+</html>
